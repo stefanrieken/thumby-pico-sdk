@@ -61,7 +61,7 @@ int main() {
   display_write_buffer(buffer, 72*40 / 8);
   
   while(true) {
-    printf("Press 'y' or keypad up if you like a beep!\n");
+    printf("Press 'y' or button A if you like a beep!\n");
     for (int i=0; i<10; i++) {
       if (!gpio_get(BTN_A) || getchar_timeout_us(100 * 1000) == 'y') {
         beep(slice_num, 440, 100);
